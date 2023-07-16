@@ -12,8 +12,8 @@ app.listen(3000,async ()=>{
 app.use(express.json())
 app.use(express.urlencoded({extended : false}))
 
-app.get("/",(req, res)=>{
-    res.send(req.query)
+app.get("/",()=>{
+    res.send("api is running")
 })
 
 app.post("/create", async(req, res)=>{
