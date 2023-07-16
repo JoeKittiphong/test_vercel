@@ -1,12 +1,9 @@
 const express = require("express")
 const app = express()
 
-
-const product = require("./routes/product")
 const connectMonogDB = require("./mongoDB/connection")
 const blog = require("./mongoDB/model")
 
-app.use("/api/product", product )
 
 app.listen(3000,async ()=>{
     await connectMonogDB()
