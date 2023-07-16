@@ -40,5 +40,3 @@ app.delete("/delete/:id", async(req, res)=>{
     await blog.findByIdAndDelete(req.params.id)
     res.send(`${req.params.id} is deleted`)
 })
-
-module.exports = app

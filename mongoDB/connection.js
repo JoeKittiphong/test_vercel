@@ -1,8 +1,8 @@
 const mongoose = require("mongoose")
-require("dotenv").config()
 
+MONGO_URI = "mongodb+srv://zylaah:zylaah@nextblogdb.awdgvxo.mongodb.net/?retryWrites=true&w=majority"
 const connectMonogDB=async()=>{
-    await mongoose.connect(process.env.MONGO_URI)
+    await mongoose.connect(MONGO_URI)
         .then(()=>{
             console.log("mongo is connected");
         })
